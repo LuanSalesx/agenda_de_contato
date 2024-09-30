@@ -1,4 +1,4 @@
-from utils.cadastros.incluir import incluir_contato
+'''from utils.cadastros.incluir import incluir_contato
 from utils.cadastros.listar import listar_contato
 from utils.cadastros.pesquisar import pesquisar_contatoID
 from utils.cadastros.remover import remover_contato
@@ -21,4 +21,4 @@ def menu():
     elif opcao == '4':
         remover_contato()
     elif opcao == '5':
-        print("Saindo...")
+        print("Saindo...")'''
