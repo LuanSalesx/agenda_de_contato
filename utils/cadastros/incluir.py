@@ -1,6 +1,6 @@
 # Incluir contatos
 import os
-def incluir(agenda_file, nome, email, telefone):    
+def incluir_contato(agenda_file, nome, email, telefone):    
     nome = nome.upper()
     email = email.upper()
     telefone = telefone.upper()
