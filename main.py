@@ -1,6 +1,8 @@
 import os
 from utils.cadastros.incluir import incluir_contato
 from utils.cadastros.listar import listar_contatos
+from utils.cadastros.pesquisar import pesquisar_contato
+from utils.cadastros.remover import remover_contato
 
 def gerar_proximo_id():
     if not os.path.exists("agenda.txt"):
@@ -35,3 +37,18 @@ def menu():
 
         elif opcao == "2":
             listar_contatos()
+
+        elif opcao == "3":
+            id_pesquisa = input("Digite o ID do contato a ser pesquisado: ")
+            pesquisar_contato(id_pesquisa)
+
+        elif opcao == "4":
+            id_remover = input("Digite o ID do contato a ser removido: ")
+            remover_contato(id_remover)
+        
+        elif opcao == "5":
+            print("Saindo...")
+            break
+            
+        else:
+            print("Opção inválida. Tente novamente.")
