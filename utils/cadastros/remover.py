@@ -1,8 +1,11 @@
 def remover_contato(id):
     try:
+        # Abre o arquivo no modo leitura
         with open("agenda.txt", "r") as agenda:
             contatos = agenda.readlines()
+            # Abre o arquivo no modo escrita
         with open("agenda.txt", "w") as agenda:
+            # Contatos onde o ID não é fornecido
             contato_encontrado = False
             for contato in contatos:
                 id_contato, nome, email, telefone = contato.strip().split(",")
