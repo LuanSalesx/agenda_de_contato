@@ -1,9 +1,10 @@
-import os
 from utils.cadastros.incluir import incluir_contato
 from utils.cadastros.listar import listar_contatos
 from utils.cadastros.pesquisar import pesquisar_contato
 from utils.cadastros.remover import remover_contato
+import os
 
+# Função para gerar o próximo ID único
 def gerar_proximo_id():
     if not os.path.exists("agenda.txt"):
         return 1  # Se o arquivo não existir, o primeiro ID será 1
@@ -15,9 +16,10 @@ def gerar_proximo_id():
             return ultimo_id + 1
         return 1  # Se o arquivo estiver vazio, o ID será 1
 
+# Menu principal
 def menu():
     while True:
-        print("\n------ Agenda de Contatos ------")
+        print("\n--- Agenda de Contatos ---")
         print("1. Incluir Contato")
         print("2. Listar Contatos")
         print("3. Pesquisar Contato")
@@ -27,6 +29,7 @@ def menu():
         opcao = input("Escolha uma opção: ")
 
         if opcao == "1":
+            # Coleta de dados para inclusão
             nome = input("Nome: ").upper()
             email = input("Email: ").upper()
             telefone = input("Telefone: ")
@@ -39,19 +42,19 @@ def menu():
             listar_contatos()
 
         elif opcao == "3":
-            id_pesquisa = input("Digite o ID do contato a ser pesquisado: ")
-            pesquisar_contato(id_pesquisa)
+            id = input("Digite o ID do contato: ")
+            print(pesquisar_contato(id))
 
         elif opcao == "4":
-            id_remover = input("Digite o ID do contato a ser removido: ")
-            remover_contato(id_remover)
-        
+            id = input("Digite o ID do contato a ser removido: ")
+            remover_contato(id)
+
         elif opcao == "5":
-            print("Saindo...")
+            print("Saindo do programa...")
             break
-            
+
         else:
             print("Opção inválida. Tente novamente.")
-        
+
 if __name__ == "__main__":
     menu()
