@@ -1,5 +1,13 @@
 # Listar contatos
 def listar_contatos():
+    """
+    Função para listar todos os contatos na agenda.
+    Lê o arquivo agenda.txt e exibe cada contato formatado.
+    Caso não haja contatos, exibe uma mensagem informando
+    que não há contatos na agenda.
+    Returns:
+        None
+    """
     try:
         # Abre o arquivo agenda.txt
         with open("agenda.txt", "r") as agenda:

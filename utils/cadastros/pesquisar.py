@@ -1,5 +1,14 @@
 # Pesquisar contato
 def pesquisar_contato(id):
+    """
+    Função para pesquisar um contato na agenda pelo ID.
+
+    Args:
+        id (int): ID do contato a ser pesquisado.
+
+    Returns:
+        str: Informações do contato encontrado ou mensagem de erro.
+    """
     try:
         with open("agenda.txt", "r") as agenda:
             contatos = agenda.readlines()

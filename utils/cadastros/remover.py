@@ -1,4 +1,13 @@
 def remover_contato(id):
+    """
+    Função para remover um contato da agenda.
+
+    Args:
+        id (int): ID do contato a ser removido.
+
+    Returns:
+        None
+    """
     try:
         # Abre o arquivo no modo leitura
         with open("agenda.txt", "r") as agenda:
