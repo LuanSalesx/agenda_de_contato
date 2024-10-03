@@ -19,12 +19,13 @@ def gerar_proximo_id():
 # Menu principal
 def menu():
     while True:
-        print("\n--- Agenda de Contatos ---")
-        print("1. Incluir Contato")
-        print("2. Listar Contatos")
-        print("3. Pesquisar Contato")
-        print("4. Remover Contato")
-        print("5. Sair")
+        print("\n====== Agenda de Contatos ======")
+        print("1) Incluir Contato")
+        print("2) Listar Contatos")
+        print("3) Pesquisar Contato")
+        print("4) Remover Contato")
+        print("5) Sair")
+        print(32 * "=")
 
         opcao = input("Escolha uma opção: ")
 
