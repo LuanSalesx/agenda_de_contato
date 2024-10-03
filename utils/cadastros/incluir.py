@@ -3,4 +3,4 @@ def incluir_contato(id, nome, email, telefone):
     with open("agenda.txt", "a") as agenda:
         # Adiciona um novo contato no formato id;nome;email;telefone
         agenda.write(f"{id};{nome.upper()};{email.upper()};{telefone}\n")
-    print("Contato incluído com sucesso!")
+    print("CONTATO INCLUÍDO COM SUCESSO!")

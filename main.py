@@ -19,18 +19,17 @@ def gerar_proximo_id():
 # Menu principal
 def menu():
     while True:
-        print("\n====== Agenda de Contatos ======")
-        print("1) Incluir Contato")
-        print("2) Listar Contatos")
-        print("3) Pesquisar Contato")
-        print("4) Remover Contato")
-        print("5) Sair")
-        print(32 * "=")
+        print("\n====== Agenda de Contatos do Luan ======")
+        print("(1) Incluir Contato")
+        print("(2) Listar Contatos")
+        print("(3) Pesquisar Contato")
+        print("(4) Remover Contato")
+        print("(5) Sair")
+        print(40 * "=")
 
         opcao = input("Escolha uma opção: ")
 
         if opcao == "1":
-            # Coleta de dados para inclusão
             nome = input("Nome: ").upper()
             email = input("Email: ").upper()
             telefone = input("Telefone: ")
@@ -51,7 +50,7 @@ def menu():
             remover_contato(id)
 
         elif opcao == "5":
-            print("Saindo do programa...")
+            print("Saindo do programa...Fim.")
             break
 
         else:
